@@ -1,20 +1,19 @@
 ﻿{
     "version": "1.0.0-*",
-    "description": "DotNetLiberty.Http Class Library",
+    "description": "A strongly typed client for ASP.NET 5 Web API",
     "authors": [ "Armen Shimoon" ],
     "tags": [ "" ],
     "projectUrl": "http://dotnetliberty.com",
     "licenseUrl": "https://opensource.org/licenses/MIT",
 
     "frameworks": {
-        "dnxcore50": { },
-        "dotnet5.4": { }
+        "dotnet5.4": { },
+        "dnxcore50": { }
     },
     "dependencies": {
         "Microsoft.CSharp": "4.0.1-beta-23516",
         "System.Collections": "4.0.11-beta-23516",
         "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516",
         "System.Threading": "4.0.11-beta-23516",
         "System.Net.Http": "4.0.1-beta-23516",
         "System.Runtime.Serialization.Json": "4.0.1-beta-23516"
