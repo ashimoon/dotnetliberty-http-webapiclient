@@ -8,7 +8,7 @@ Supports synchronous and asynchronous `GET`/`POST`/`PUT`/`DELETE`.
 
 ## Setup
 Declare a model:
-```
+```csharp
 public class Thing
 {
     public int Id { get; set; }
@@ -17,7 +17,7 @@ public class Thing
 ```
 
 Create client:
-```
+```csharp
 // Second type parameter is the ID type
 var client = new WebApiClient<Thing, int>(
     new Uri("http://localhost:5000/api/things/"));
@@ -25,7 +25,7 @@ var client = new WebApiClient<Thing, int>(
 
 ## GET /api/things/
 
-```
+```csharp
 // Async
 IEnumerable<Thing> things = await _client.GetAsync();
 // Sync
@@ -34,7 +34,7 @@ IEnumerable<Thing> things = _client.Get();
 
 ## GET /api/things/{id}
 
-```
+```csharp
 var id = 1;
 // Async
 Thing thing = await _client.GetAsync(id);
@@ -44,7 +44,7 @@ Thing thing = _client.Get(id);
 
 ## POST /api/things/
 
-```
+```csharp
 // Async
 Thing created = await _client.PostAsync(new Thing
 {
@@ -62,7 +62,7 @@ Thing created = _client.Post(new Thing
 
 ## PUT /api/things/{id}
 
-```
+```csharp
 var id = 3;
 // Async
 Thing updated = await _client.PutAsync(id, new Thing
@@ -81,7 +81,7 @@ Thing updated = _client.Put(id, new Thing
 
 ## DELETE /api/things/{id}
 
-```
+```csharp
 var id = 4;
 // Async
 await _client.DeleteAsync(id);
