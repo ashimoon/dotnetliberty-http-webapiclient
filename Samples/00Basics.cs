@@ -25,25 +25,37 @@ namespace DotNetLiberty.Http.Samples
         public async void GetManyAsync()
         {
             // GET /api/things/
-            IEnumerable<Thing> things = await _client.GetAsync();
+            IEnumerable<Thing> things = await _client.GetManyAsync();
         }
 
-        public void GetMany()
+        public void GetManyShortHand()
         {
             // GET /api/things/
             IEnumerable<Thing> things = _client.Get();
         }
 
+        public void GetMany()
+        {
+            // GET /api/things/
+            IEnumerable<Thing> things = _client.GetMany();
+        }
+
         public async void GetSingleAsync()
         {
             // GET /api/things/1
-            Thing thing = await _client.GetAsync(1);
+            Thing thing = await _client.GetSingleAsync(1);
+        }
+
+        public void GetSingleShortHand()
+        {
+            // GET /api/things/1
+            Thing thing = _client.Get(1);
         }
 
         public void GetSingle()
         {
             // GET /api/things/1
-            Thing thing = _client.Get(1);
+            Thing thing = _client.GetSingle(1);
         }
 
         public async void PostAsync()
