@@ -1,8 +1,8 @@
 ﻿{
-    "version": "1.0.0-*",
+    "version": "1.0.1-*",
     "title": "DotNetLiberty.Http.WebApiClient",
     "copyright": "2015 Armen Shimoon (.NET Liberty - http://dotnetliberty.com)",
-    "description": "A simple client for interacting with a RESTful APIs using strongly typed models on .NET Core.",
+    "description": "A simple client for interacting with a RESTful APIs (including Web API) using strongly typed models on .NET and .NET Core.",
     "authors": [ "Armen Shimoon" ],
     "tags": [ "" ],
     "projectUrl": "https://github.com/ashimoon/dotnetliberty-http-webapiclient",
@@ -32,6 +32,6 @@
         }
     },
     "dependencies": {
-        "DotNetLiberty.Http":  "1.0.0"
+        "DotNetLiberty.Http":  "1.0.1"
     }
 }
