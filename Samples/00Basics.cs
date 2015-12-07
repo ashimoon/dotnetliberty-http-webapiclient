@@ -22,6 +22,12 @@ namespace DotNetLiberty.Http.Samples
                 new Uri("http://localhost:5000/api/things/"));
         }
 
+        public async void GetManyAsyncShortHand()
+        {
+            // GET /api/things/
+            IEnumerable<Thing> things = await _client.GetAsync();
+        }
+
         public async void GetManyAsync()
         {
             // GET /api/things/
@@ -44,6 +50,12 @@ namespace DotNetLiberty.Http.Samples
         {
             // GET /api/things/1
             Thing thing = await _client.GetSingleAsync(1);
+        }
+
+        public async void GetSingleAsyncShortHand()
+        {
+            // GET /api/things/1
+            Thing thing = await _client.GetAsync(1);
         }
 
         public void GetSingleShortHand()

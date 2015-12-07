@@ -19,6 +19,11 @@ namespace DotNetLiberty.Http
                 .WaitOrUnwrapException();
         }
 
+        public async Task<IEnumerable<TEntity>> GetAsync()
+        {
+            return await GetManyAsync();
+        }
+
         public async Task<IEnumerable<TEntity>> GetManyAsync()
         {
             return await this.GetManyAsync<TEntity>();
@@ -33,6 +38,11 @@ namespace DotNetLiberty.Http
         {
             return this.GetManyAsync<TEntity>()
                 .AwaitResultOrUnwrapException();
+        }
+
+        public async Task<TEntity> GetAsync(TKey id)
+        {
+            return await GetSingleAsync(id);
         }
 
         public async Task<TEntity> GetSingleAsync(TKey id)
